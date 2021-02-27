@@ -12,7 +12,7 @@ languages:
   en:
     copyright: ''
     keywords: ''
-    menu:
+    menu: R
       main:
         - identifier: about
           name: About
