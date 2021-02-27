@@ -31,7 +31,7 @@ title: Ressourcen
   - Link 1
   - Link 2
 - Bücher & Dokumente
-  - Open Source Buch [*Geocomputation with R*](https://geocompr.robinlovelace.net/)
-  - Link 2
+  - Open Source Buch [*Geocomputation with R*](https://geocompr.robinlovelace.net/) über GIS in R
+  - Open Source Buch (bzw. Dokumentation) [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/)
 
 
