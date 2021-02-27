@@ -1,7 +1,7 @@
 ---
-author: Marco Degener
+author: Marco
 date: "2021-02-27"
-title: Über mich
+title: Was ist ein Rchaeopteryx?
 ---
 
 # Guten Tag!
