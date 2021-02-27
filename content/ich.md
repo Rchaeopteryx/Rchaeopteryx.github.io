@@ -1,6 +1,6 @@
 ---
 author: Marco Degener
-date: "27.02.2021"
+date: "2021-02-27"
 title: Über mich
 ---
 
