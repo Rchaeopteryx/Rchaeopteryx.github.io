@@ -8,7 +8,7 @@ params:
 
 # Herzlich willkommen!
 
-Mein Name ist Marco und ich bin ein _**R**__chaeopteryx_. 
+Mein Name ist Marco und ich bin ein _**R**chaeopteryx_.
 
 Ich interessiere mich für:
 
