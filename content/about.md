@@ -1,22 +1,37 @@
 ---
-author: Radek
-date: "2019-01-25"
-title: About
+author: Marco
+date: "2021-02-27"
+title: Ressourcen
 ---
 
-# Hi there
+# Software
 
-My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
+- Programmieren mit R
+  - RStudio
+  - R Programmiersprache
+- GIS (Geografische Informationssysteme)
+  - QGIS
+  - SNAP
 
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
+# Daten
 
-This theme is pretty basic and covers all of the essentials. All you have to do is start typing!
+- Kategorie 1
+  - Link 1
+  - Link 2
+- Kategorie 2
+  - Link 1
+  - Link 2
 
-The theme includes:
+# Lernmaterial
 
-- **5 duotone themes**, depending on your preferences (orange, red, blue, green, pink)
-- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
-- **really nice, custom duotone** syntax highlighting based on [**PrismJS**](https://prismjs.com)
-- mobile friendly layout
+- Tutorials
+  - Link 1
+  - Link 2
+- Videos / Kanäle
+  - Link 1
+  - Link 2
+- Bücher & Dokumente
+  - Open Source Buch [*Geocomputation with R*](https://geocompr.robinlovelace.net/)
+  - Link 2
 
-So, there you have it... enjoy!
+
