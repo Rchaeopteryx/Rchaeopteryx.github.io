@@ -21,8 +21,8 @@ languages:
           name: About
           url: /about
         - identifier: showcase
-          name: QGIS
-          url: /QGIS
+          name: showcase
+          url: /showcase
     menuMore: mehr
     params:
       logo:
