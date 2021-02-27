@@ -3,16 +3,16 @@ languageCode: en-us
 theme: hugo-theme-terminal
 paginate: 5
 params:
-  centerTheme: no
+  centerTheme: yes
   contentTypeName: post
   fullWidthTheme: no
-  showMenuItems: 2
+  showMenuItems: 1
   themeColor: orange
 languages:
   en:
     copyright: ''
     keywords: ''
-    menu: R
+    menu:
       main:
         - identifier: about
           name: About
