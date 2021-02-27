@@ -6,7 +6,7 @@ params:
   centerTheme: yes
   contentTypeName: post
   fullWidthTheme: no
-  showMenuItems: 1
+  showMenuItems: 5
   themeColor: orange
 languages:
   en:
@@ -15,11 +15,11 @@ languages:
     menu:
       main:
         - identifier: about
-          name: About
-          url: /about
+          name: über mich
+          url: /ueber_mich
         - identifier: showcase
-          name: Showcase
-          url: /showcase
+          name: QGIS
+          url: /QGIS
     menuMore: mehr
     params:
       logo:
