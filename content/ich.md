@@ -1,5 +1,5 @@
 ---
-author: Marco
+author: Marco Degener
 date: "27.02.2021"
 title: Über mich
 params:
@@ -8,7 +8,7 @@ params:
 
 # Herzlich willkommen!
 
-Mein Name ist Marco Degener und ich bin ein **R***chaeopteryx*. 
+Mein Name ist Marco und ich bin ein _**R**__chaeopteryx_. 
 
 Ich interessiere mich für:
 
