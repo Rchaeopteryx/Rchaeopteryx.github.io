@@ -7,20 +7,20 @@ params:
   contentTypeName: post
   fullWidthTheme: no
   showMenuItems: 5
-  themeColor: orange
+  themeColor: blue ### orange, red, blue, green, pink
 languages:
   en:
     copyright: ''
     keywords: ''
     menu:
       main:
-        1 identifier: ich
+        - identifier: ich
           name: Ich
           url: /ich
-        2 identifier: about
+        - identifier: about
           name: About
           url: /about
-        3 identifier: showcase
+        - identifier: showcase
           name: QGIS
           url: /QGIS
     menuMore: mehr
