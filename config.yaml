@@ -14,9 +14,12 @@ languages:
     keywords: ''
     menu:
       main:
-        - identifier: about
-          name: Über mich
+        - identifier: ich
+          name: Ich
           url: /ich
+        - identifier: about
+          name: About
+          url: /about
         - identifier: showcase
           name: QGIS
           url: /QGIS
