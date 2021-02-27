@@ -20,12 +20,12 @@ languages:
         - identifier: showcase
           name: Showcase
           url: /showcase
-    menuMore: Show more
+    menuMore: mehr
     params:
       logo:
         logoHomeLink: /
-        logoText: Terminal
-    readMore: Read more
-    readOtherPosts: Read other posts
+        logoText: Rchaeopteryx
+    readMore: weiterlesen
+    readOtherPosts: weitere Artikel
     subtitle: A simple, retro theme for Hugo
     title: Terminal
