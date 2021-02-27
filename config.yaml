@@ -17,9 +17,9 @@ languages:
         - identifier: ich
           name: Ich
           url: /ich
-        - identifier: about
-          name: About
-          url: /about
+        - identifier: ressourcen
+          name: Ressourcen
+          url: /ressourcen
         - identifier: showcase
           name: showcase
           url: /showcase
