@@ -15,8 +15,8 @@ languages:
     menu:
       main:
         - identifier: about
-          name: über mich
-          url: /ueber_mich
+          name: Über mich
+          url: /ich
         - identifier: showcase
           name: QGIS
           url: /QGIS
