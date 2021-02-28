@@ -7,7 +7,7 @@ params:
   contentTypeName: post
   fullWidthTheme: no
   showMenuItems: 5
-  themeColor: orange ### orange, red, blue, green, pink
+  themeColor: red ### orange, red, blue, green, pink
   showLastUpdated: true
   TableOfContents: true
 languages:
