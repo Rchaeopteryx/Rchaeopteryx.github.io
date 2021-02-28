@@ -8,7 +8,7 @@ params:
   fullWidthTheme: no
   showMenuItems: 5
   themeColor: orange ### orange, red, blue, green, pink
-  showLastUpdated = true
+  showLastUpdated: true
 languages:
   en:
     copyright: ''
