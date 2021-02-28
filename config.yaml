@@ -7,9 +7,8 @@ params:
   contentTypeName: post
   fullWidthTheme: no
   showMenuItems: 5
-  themeColor: red ### orange, red, blue, green, pink
+  themeColor: orange ### orange, red, blue, green, pink
   showLastUpdated: true
-  TableOfContents: true
 languages:
   en:
     copyright: ''
