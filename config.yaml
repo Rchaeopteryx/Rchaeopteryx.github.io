@@ -27,7 +27,7 @@ languages:
     menuMore: more
     params:
       logo:
-        logoHomeLink: /img/R-logo.png
+        logoHomeLink: /img/R-logo2.png
         logoText: chaeopteryx
     readMore: read more
     readOtherPosts: read other posts
