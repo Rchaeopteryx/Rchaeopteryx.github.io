@@ -1,6 +1,6 @@
 baseurl: https://Rchaeopteryx.netlify.app/
 languageCode: en-us
-theme: hugo-theme-terminal
+theme: "starter-academic"
 paginate: 5
 params:
   centerTheme: yes
