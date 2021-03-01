@@ -34,3 +34,26 @@ languages:
     readOtherPosts: weitere Artikel
     subtitle: Meine R-Projekte
     title: Rchaeopteryx
+  en:
+    copyright: ''
+    keywords: ''
+    menu:
+      main:
+        - identifier: ich
+          name: About me
+          url: /about_me
+        - identifier: ressourcen
+          name: Ressources
+          url: /ressources
+        - identifier: showcase
+          name: showcase
+          url: /showcase
+    menuMore: more
+    params:
+      logo:
+        logoHomeLink: /
+        logoText: Rchaeopteryx
+    readMore: read more
+    readOtherPosts: read other posts
+    subtitle: My R-Projects
+    title: Rchaeopteryx
