@@ -7,7 +7,7 @@ params:
   contentTypeName: post
   fullWidthTheme: no
   showMenuItems: 5
-  themeColor: blue ### orange, red, blue, green, pink
+  themeColor: orange ### orange, red, blue, green, pink
   showLastUpdated: true
 languages:
   en:
@@ -16,14 +16,14 @@ languages:
     keywords: ''
     menu:
       main:
-        - identifier: ich
+        - identifier: about
           name: About
           url: /about
         - identifier: ressources
           name: Ressources
           url: /ressources
         - identifier: showcase
-          name: showcase
+          name: Showcase
           url: /showcase
     menuMore: more
     params:
