@@ -1,37 +1,38 @@
 ---
 author: Marco
 date: "2021-02-27"
-title: Ressourcen
+title: Resources
 ---
+
+This is a growing collection of the free and open resources I deploy with my projects
 
 # Software
 
-- Programmieren mit R
+- Programming with R
   - RStudio
-  - R Programmiersprache
-- GIS (Geografische Informationssysteme)
+  - R Language
+- GIS (Geographic Information Systems)
   - QGIS
   - SNAP
 
-# Daten
+# Open Data
 
-- Kategorie 1
-  - Link 1
-  - Link 2
-- Kategorie 2
-  - Link 1
-  - Link 2
+- Covid
+  - a variety of [data links](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html) from RKI (under 'Daten zum Download')
+- Berlin
+  - [Berlin Open Data portal](https://daten.berlin.de/)
+  - Geodata for Berlin in [Geoportal Berlin](https://stadtentwicklung.berlin.de/geoinformation/fis-broker/index.shtml)
 
-# Lernmaterial
+# Education
 
 - Tutorials
   - Link 1
   - Link 2
-- Videos / Kanäle
-  - Link 1
+- Videos / Channels
+  - [CradleToGraveR](https://www.youtube.com/c/CradleToGraveR/featured) (YT) has lots of very helpful content on R (for example [this video](https://www.youtube.com/watch?v=9Jqvaoeh1W4) that helped me making this website in a matter of hours)
   - Link 2
-- Bücher & Dokumente
-  - Open Source Buch [*Geocomputation with R*](https://geocompr.robinlovelace.net/) über GIS in R
-  - Open Source Buch (bzw. Dokumentation) [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/)
+- Books / Documents
+  - Open source book [*Geocomputation with R*](https://geocompr.robinlovelace.net/) about GIS with R
+  - Open source book (bzw. Dokumentation) [*R Markdown: The Definitive Guide*](https://bookdown.org/yihui/rmarkdown/) on R Markdown language
 
 
