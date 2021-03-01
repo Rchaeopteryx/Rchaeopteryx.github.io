@@ -27,7 +27,7 @@ languages:
     menuMore: more
     params:
       logo:
-        logoHomeLink: /
+        logoHomeLink: /img/
         logoText: Rchaeopteryx
     readMore: read more
     readOtherPosts: read other posts
