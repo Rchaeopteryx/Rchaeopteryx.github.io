@@ -11,7 +11,6 @@ params:
   showLastUpdated: true
 languages:
   en:
-    name: EN
     copyright: ''
     keywords: ''
     menu:
@@ -28,8 +27,8 @@ languages:
     menuMore: more
     params:
       logo:
-        logoHomeLink: /
-        logoText: Rchaeopteryx
+        logoHomeLink: /img/R-logo.png
+        logoText: chaeopteryx
     readMore: read more
     readOtherPosts: read other posts
     subtitle: My R-Projects
