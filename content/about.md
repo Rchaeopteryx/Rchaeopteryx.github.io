@@ -1,9 +1,8 @@
-+++
-author = "Marco"
-date = "2021-02-27"
-title = "What's an Rchaeopteryx?"
-
-+++
+---
+author: Marco
+date: "2021-02-27"
+title: What's an Rchaeopteryx?
+---
 
 # Hello world!
 
