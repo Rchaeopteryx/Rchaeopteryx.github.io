@@ -8,21 +8,22 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://Rchaeopteryx.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ressourcen</title>
-      <link>https://Rchaeopteryx.netlify.app/ressourcen/</link>
+      <title>Resources</title>
+      <link>https://Rchaeopteryx.netlify.app/ressources/</link>
       <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://Rchaeopteryx.netlify.app/ressourcen/</guid>
-      <description>Software  Programmieren mit R  RStudio R Programmiersprache   GIS (Geografische Informationssysteme)  QGIS SNAP    Daten  Kategorie 1  Link 1 Link 2   Kategorie 2  Link 1 Link 2    Lernmaterial  Tutorials  Link 1 Link 2   Videos / Kanäle  Link 1 Link 2   Bücher &amp;amp; Dokumente  Open Source Buch Geocomputation with R über GIS in R Open Source Buch (bzw.</description>
+      <guid>https://Rchaeopteryx.netlify.app/ressources/</guid>
+      <description>This is a growing collection of the free and open resources I use with my projects.
+Software Programming with R  the R language is a free software environment for statistical computing and graphics RStudio is a free and open source IDE for the R language  GIS (Geographic Information Systems)  QGIS is a free and open source GIS  Open Data Covid  a variety of data links from RKI (under &amp;lsquo;Daten zum Download&amp;rsquo;)  Berlin  Berlin Open Data portal Geodata for Berlin in Geoportal Berlin  Education Videos / Channels  CradleToGraveR (YT) has lots of very helpful content on R (for example this video that helped me making this website in a matter of hours)  Books / Documents  Open source book Geocomputation with R about GIS with R Open source book (bzw.</description>
     </item>
     
     <item>
-      <title>Was ist ein Rchaeopteryx?</title>
-      <link>https://Rchaeopteryx.netlify.app/ich/</link>
+      <title>What&#39;s an Rchaeopteryx?</title>
+      <link>https://Rchaeopteryx.netlify.app/about/</link>
       <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://Rchaeopteryx.netlify.app/ich/</guid>
-      <description>Guten Tag! Mein Name ist Marco und ich bin ein Rchaeopteryx: Innendrin bin ich immer noch der kleine neugierige Junge, der schon in den frühen 80-er Jahren, wenn er nicht gerade mit seinen Großeltern durch die schönsten Landschaften Ostdeutschlands gewandert ist, seine Nase stets in Tierbücher (besonders oft über Dinosaurier) gesteckt hat. Außendraußen bin ich mittlerweile ein nicht minder neugieriger mittelalter Mann, der viel zu viel vor dem Computer sitzt und viel lieber zusammen mit einem Hund in einem Bauwagen am Waldrand wohnen würde als ohne Hund mitten in Berlin.</description>
+      <guid>https://Rchaeopteryx.netlify.app/about/</guid>
+      <description>Hello world! My name is Marco and I am an Rchaeopteryx: Inside, I&amp;rsquo;m still the curious little boy who, in the early 80s, when I wasn&amp;rsquo;t hiking through the most beautiful landscapes of East Germany with my grandparents, always stuck my nose into animal books (especially about dinosaurs); outside I am now a no less curious man in his prime who sits far too much in front of the computer and would much rather live with a dog in a trailer at the edge of the forest than without a dog in the middle of Berlin.</description>
     </item>
     
     <item>
