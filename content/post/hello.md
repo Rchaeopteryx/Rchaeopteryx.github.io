@@ -1,6 +1,6 @@
 ---
 author: Lorem Ipsum
-cover: img/hello.jpg
+cover: /img/hello.jpg
 date: "2019-01-25"
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum
   metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur
