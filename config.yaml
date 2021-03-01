@@ -27,8 +27,8 @@ languages:
     menuMore: more
     params:
       logo:
-        logoHomeLink: /img/R-logo2.png
-        logoText: chaeopteryx
+        logoHomeLink: /
+        logoText: Rchaeopteryx
     readMore: read more
     readOtherPosts: read other posts
     subtitle: My R-Projects
