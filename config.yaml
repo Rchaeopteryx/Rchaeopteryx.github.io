@@ -1,16 +1,17 @@
 baseurl: https://Rchaeopteryx.netlify.app/
-languageCode: en-us
+languageCode: de-de
 theme: hugo-theme-terminal
 paginate: 5
 params:
   centerTheme: yes
   contentTypeName: post
+  showLanguageSelector: true
   fullWidthTheme: no
   showMenuItems: 5
   themeColor: blue ### orange, red, blue, green, pink
   showLastUpdated: true
 languages:
-  en:
+  de:
     copyright: ''
     keywords: ''
     menu:
