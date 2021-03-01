@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rchaeopteryx</title>
+    <link>https://Rchaeopteryx.netlify.app/</link>
+    <description>Recent content on Rchaeopteryx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://Rchaeopteryx.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ressourcen</title>
+      <link>https://Rchaeopteryx.netlify.app/ressourcen/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rchaeopteryx.netlify.app/ressourcen/</guid>
+      <description>Software  Programmieren mit R  RStudio R Programmiersprache   GIS (Geografische Informationssysteme)  QGIS SNAP    Daten  Kategorie 1  Link 1 Link 2   Kategorie 2  Link 1 Link 2    Lernmaterial  Tutorials  Link 1 Link 2   Videos / Kanäle  Link 1 Link 2   Bücher &amp;amp; Dokumente  Open Source Buch Geocomputation with R über GIS in R Open Source Buch (bzw.</description>
+    </item>
+    
+    <item>
+      <title>Was ist ein Rchaeopteryx?</title>
+      <link>https://Rchaeopteryx.netlify.app/ich/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rchaeopteryx.netlify.app/ich/</guid>
+      <description>Guten Tag! Mein Name ist Marco und ich bin ein Rchaeopteryx: Innendrin bin ich immer noch der kleine neugierige Junge, der schon in den frühen 80-er Jahren, wenn er nicht gerade mit seinen Großeltern durch die schönsten Landschaften Ostdeutschlands gewandert ist, seine Nase stets in Tierbücher (besonders oft über Dinosaurier) gesteckt hat. Außendraußen bin ich mittlerweile ein nicht minder neugieriger mittelalter Mann, der viel zu viel vor dem Computer sitzt und viel lieber zusammen mit einem Hund in einem Bauwagen am Waldrand wohnen würde als ohne Hund mitten in Berlin.</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>https://Rchaeopteryx.netlify.app/post/2020-12-01-r-rmarkdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://Rchaeopteryx.netlify.app/post/2020-12-01-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+    <item>
+      <title>Hello Friend</title>
+      <link>https://Rchaeopteryx.netlify.app/post/hello/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rchaeopteryx.netlify.app/post/hello/</guid>
+      <description>Loren ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
+ Fusce pharetra suscipit orci nec tempor.</description>
+    </item>
+    
+    <item>
+      <title>Showcase</title>
+      <link>https://Rchaeopteryx.netlify.app/showcase/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://Rchaeopteryx.netlify.app/showcase/</guid>
+      <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
+    </item>
+    
+  </channel>
+</rss>
