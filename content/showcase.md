@@ -1,8 +1,9 @@
----
-author: Hello Robot
-date: "2018-07-18"
-title: Showcase
----
++++
+author = "Hello Robot"
+date = "2018-07-18"
+title = "Showcase"
+
++++
 
 ## Header 2
 
