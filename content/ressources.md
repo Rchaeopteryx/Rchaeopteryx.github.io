@@ -19,7 +19,7 @@ This is a growing collection of the free and open resources I use with my projec
 
 # Open Data
 
-### Covid
+## Covid
 
 - a variety of [data links](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html) from RKI (under 'Daten zum Download')
 
