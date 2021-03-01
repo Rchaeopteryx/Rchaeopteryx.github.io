@@ -12,6 +12,7 @@ params:
   showLastUpdated: true
 languages:
   de:
+    name: DE
     copyright: ''
     keywords: ''
     menu:
@@ -35,6 +36,7 @@ languages:
     subtitle: Meine R-Projekte
     title: Rchaeopteryx
   en:
+    name: EN
     copyright: ''
     keywords: ''
     menu:
