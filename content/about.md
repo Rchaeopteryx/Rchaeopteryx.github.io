@@ -1,16 +1,16 @@
 ---
 author: Marco
 date: "2021-02-27"
-title: Was ist ein Rchaeopteryx?
+title: What's an Rchaeopteryx?
 ---
 
-# Guten Tag!
+# Hello world!
 
-Mein Name ist Marco und ich bin ein _**R**chaeopteryx_:
-Innendrin bin ich immer noch der kleine neugierige Junge, der schon in den frühen 80-er Jahren, wenn er nicht gerade mit seinen Großeltern durch die schönsten Landschaften Ostdeutschlands gewandert ist, seine Nase stets in Tierbücher (besonders oft über Dinosaurier) gesteckt hat. Außendraußen bin ich mittlerweile ein nicht minder neugieriger mittelalter Mann, der viel zu viel vor dem Computer sitzt und viel lieber zusammen mit einem Hund in einem Bauwagen am Waldrand wohnen würde als ohne Hund mitten in Berlin. Alles in allem bin ich also so eine Art _naturverbundener Computernerd_.
+My name is Marco and I am an _**R**chaeopteryx_:
+Inside, I'm still the curious little boy who, in the early 80s, when I wasn't wandering through the most beautiful landscapes of East Germany with my grandparents, always stuck my nose into animal books (especially about dinosaurs); outside I am now a no less curious man in his prime who sits far too much in front of the computer and would much rather live with a dog in a trailer at the edge of the forest than without a dog in the middle of Berlin. So all in all, I'm kind of a _nerdy outdoorsman_.
 
-Interessen und Studium ... (kommt bald)
+Interests and studies ... (coming soon)
 
-Auf dieser Webseite möchte ich gern ... (kommt bald)
+On this website I would like to ... (coming soon)
 
-Viel Spaß auf meiner Seite!
+Have fun on my page!

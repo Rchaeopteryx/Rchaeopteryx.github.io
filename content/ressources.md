@@ -4,7 +4,7 @@ date: "2021-02-27"
 title: Resources
 ---
 
-This is a growing collection of the free and open resources I deploy with my projects
+This is a growing collection of the free and open resources I use with my projects.
 
 # Software
 
