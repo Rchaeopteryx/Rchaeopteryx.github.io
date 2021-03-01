@@ -9,11 +9,10 @@ This is a growing collection of the free and open resources I deploy with my pro
 # Software
 
 - Programming with R
-  - RStudio
-  - R Language
+  - [R](https://www.r-project.org/) is a free software environment for statistical computing and graphics
+  - [RStudio](https://rstudio.com/) is a free and open source IDE for R
 - GIS (Geographic Information Systems)
-  - QGIS
-  - SNAP
+  - [QGIS](https://qgis.org/) is a free and open source GIS
 
 # Open Data
 
