@@ -14,7 +14,6 @@ tags:
 knitr::opts_chunk$set(echo = TRUE)
 
 rm(list = ls()) # Clear environment (for re-runs of the script) - Use carefully!!!
-#setwd(paste0("C:/Hugo/Sites/Rchaeopteryx/Rchaeopteryx.github.io","/static/R/COVID_data"))
 ```
 
 The German [Robert Koch Institute](https://www.rki.de/DE) (RKI) is an institution comparable with the Centers for Disease Control and Prevention (CDC)) in the US or the European Centre for Disease Prevention and Control (ECDC). On its website it offers [daily updated COVID-19 data](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0?orderBy=registrationdate) broken down by federal state, district, gender and age group, free to download and use. My plan for this project is to automatically download this open data on a daily basis, process it, and display it in a dashboard that is publicly available online. I want to achieve this with the R programming language and other free and open resources only.
