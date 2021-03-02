@@ -1,0 +1,117 @@
+---
+title: 'COVID Dashboard #1 - Getting the Data'
+author: Marco
+date: '2021-03-02'
+slug: covid-dashboard-1-getting-the-data
+categories:
+  - R
+tags:
+  - R
+  - open data
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list = ls()) # Clear environment (for re-runs of the script) - Use carefully!!!
+```
+
+# My project: COVID-19 Dashboard
+
+The German [Robert Koch Institute](https://www.rki.de/DE) (RKI) is an institution comparable with the Centers for Disease Control and Prevention (CDC)) in the US or the European Centre for Disease Prevention and Control (ECDC). On its website it offers [daily updated COVID-19 data](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0?orderBy=registrationdate) broken down by federal state, district, gender and age group, free to download and use. I want to automatically download this data on a daily basis, process it, and display it in a dashboard that is publicly available online. My plan is to mainly use the R programming language and only use free and open resources. In the following I describe my workflow from downloading the data to the finished dashboard.
+
+## Setting up the R session
+
+I am using [RStudio](https://rstudio.com/) (v1.4.1103) with R version 4.0.4 (2021-02-15) on a Windows machine (*x86_64-w64-mingw32/x64 (64-bit) / Windows 10 x64 (build 19042)*). The following R packages should be installed before running the code in this documentation:
+
+```{r message=FALSE}
+require(data.table)
+
+
+```
+
+## Getting the most recent data
+
+The data is provided by the RKI either as a zipped file geodatabase, or as csv file. The zipped gdb is much smaller than the csv, however, I couldn't find a way to read the table from the gdb, so I'm going to use the csv file anyway. First I store the [path to the file](https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv) in a variable:
+
+```{r}
+filepath <- c("https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv")
+```
+
+As I'm writing this, the csv file is around 200 megabyte, and with each day it gets bigger. The function ´r data.table::fread()´ reads the file in under 10 seconds into a data frame:
+
+```{r eval=FALSE}
+covid <- as.data.frame(fread(filepath, encoding = "UTF-8", colClasses = c("integer","factor","factor","factor","factor","factor","integer","integer","character","factor","factor","integer","integer","character","integer","integer","integer","factor")))
+```
+
+Since I don't want to download the whole file any time I run the script, but only when there actually is new data, I need to check when the data was last updated before completely downloading the file. I can use the content of the field *'Datenstand' (last updated)* to check for the data status by reading just one line of the file, extracting the field value and storing it as a date object:
+
+```{r}
+# read only the second line of the csv file
+csv_line2 <- readLines(filepath, encoding = "UTF-8", n = 2)[2]
+
+# split the character string at the commas
+csv_update_field_raw <- unlist(strsplit(csv_line2, ","))[11]
+
+# get the substring needed
+csv_update_field <- substr(csv_update_field_raw,2,nchar(csv_update_field_raw))
+
+# transform to date
+update_status <- as.Date(csv_update_field, format = "%d.%m.%Y")
+
+#delete obsolete objects
+rm(csv_line2,csv_update_field_raw,csv_update_field) 
+
+update_status
+
+```
+
+We can now compare the csv file's update status with the status of our last file download which along with other auxiliary variables is stored in the file *'COVID_data_auxvar.txt'*.
+
+```{r}
+# read file
+auxvar <- fread("COVID_data_auxvar.txt")
+
+# compare dates and store result in boolean 'new_data'
+if (!update_status==auxvar$last_update_status) new_data <- TRUE else new_data <- FALSE
+```
+
+Now, we can set the condition that there actually has to be new data, before we attempt to download and save it. If the file hasn't been uploaded since we last checked, the last downloaded data file is read to the environment.
+
+```{r}
+if (new_data) {
+    covid <- as.data.frame(fread(filepath, encoding = "UTF-8", colClasses = c("integer","factor","factor","factor","factor","factor","integer","integer","character","factor","factor","integer","integer","character","integer","integer","integer","factor")))
+    save(covid,file="COVID_data.Rda")
+}
+
+if (!new_data) {
+    load("COVID_data.Rda")
+}
+
+str(covid)
+```
+
+After downloading (or not downloading) new data the externally stored variables need to be updated. The file *'COVID_data_auxvar.txt'* holds the following information:
+
+- _*last_check_datetime*_: the date and time when it was last checked for new data
+- _*last_downl_datetime*_: the date and time of the latest download
+- _*last_update_status*_: the update status of the last downloaded file
+
+Depending on whether there was new data downloaded or not, different variables need to be updated:
+
+```{r}
+# if there was no new data
+if (!new_data) {
+    auxvar$last_check_datetime <- format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")
+    fwrite(auxvar,"COVID_data_auxvar.txt")
+}
+
+# if new data was downloaded
+if (new_data) {
+    auxvar$last_check_datetime <- format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")
+    auxvar$last_downl_datetime <- format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")
+    auxvar$last_update_status <- as.Date(update_status)
+    fwrite(auxvar,"COVID_data_auxvar.txt")
+}
+```
+
