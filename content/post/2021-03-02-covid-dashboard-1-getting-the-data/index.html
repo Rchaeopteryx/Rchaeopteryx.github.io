@@ -1,0 +1,105 @@
+---
+title: 'COVID Dashboard #1 - Getting the Data'
+author: Marco
+date: '2021-03-02'
+slug: covid-dashboard-1-getting-the-data
+categories:
+  - R
+tags:
+  - R
+  - open data
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="my-project-covid-19-dashboard" class="section level1">
+<h1>My project: COVID-19 Dashboard</h1>
+<p>The German <a href="https://www.rki.de/DE">Robert Koch Institute</a> (RKI) is an institution comparable with the Centers for Disease Control and Prevention (CDC)) in the US or the European Centre for Disease Prevention and Control (ECDC). On its website it offers <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0?orderBy=registrationdate">daily updated COVID-19 data</a> broken down by federal state, district, gender and age group, free to download and use. I want to automatically download this data on a daily basis, process it, and display it in a dashboard that is publicly available online. My plan is to mainly use the R programming language and only use free and open resources. In the following I describe my workflow from downloading the data to the finished dashboard.</p>
+<div id="setting-up-the-r-session" class="section level2">
+<h2>Setting up the R session</h2>
+<p>I am using <a href="https://rstudio.com/">RStudio</a> (v1.4.1103) with R version 4.0.4 (2021-02-15) on a Windows machine (<em>x86_64-w64-mingw32/x64 (64-bit) / Windows 10 x64 (build 19042)</em>). The following R packages should be installed before running the code in this documentation:</p>
+<pre class="r"><code>require(data.table)</code></pre>
+</div>
+<div id="getting-the-most-recent-data" class="section level2">
+<h2>Getting the most recent data</h2>
+<p>The data is provided by the RKI either as a zipped file geodatabase, or as csv file. The zipped gdb is much smaller than the csv, however, I couldn’t find a way to read the table from the gdb, so I’m going to use the csv file anyway. First I store the <a href="https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv">path to the file</a> in a variable:</p>
+<pre class="r"><code>filepath &lt;- c(&quot;https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv&quot;)</code></pre>
+<p>As I’m writing this, the csv file is around 200 megabyte, and with each day it gets bigger. The function ´r data.table::fread()´ reads the file in under 10 seconds into a data frame:</p>
+<pre class="r"><code>covid &lt;- as.data.frame(fread(filepath, encoding = &quot;UTF-8&quot;, colClasses = c(&quot;integer&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;character&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;character&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;factor&quot;)))</code></pre>
+<p>Since I don’t want to download the whole file any time I run the script, but only when there actually is new data, I need to check when the data was last updated before completely downloading the file. I can use the content of the field <em>‘Datenstand’ (last updated)</em> to check for the data status by reading just one line of the file, extracting the field value and storing it as a date object:</p>
+<pre class="r"><code># read only the second line of the csv file
+csv_line2 &lt;- readLines(filepath, encoding = &quot;UTF-8&quot;, n = 2)[2]
+
+# split the character string at the commas
+csv_update_field_raw &lt;- unlist(strsplit(csv_line2, &quot;,&quot;))[11]
+
+# get the substring needed
+csv_update_field &lt;- substr(csv_update_field_raw,2,nchar(csv_update_field_raw))
+
+# transform to date
+update_status &lt;- as.Date(csv_update_field, format = &quot;%d.%m.%Y&quot;)
+
+#delete obsolete objects
+rm(csv_line2,csv_update_field_raw,csv_update_field) 
+
+update_status</code></pre>
+<pre><code>## [1] &quot;2021-03-02&quot;</code></pre>
+<p>We can now compare the csv file’s update status with the status of our last file download which along with other auxiliary variables is stored in the file <em>‘COVID_data_auxvar.txt’</em>.</p>
+<pre class="r"><code># read file
+auxvar &lt;- fread(&quot;COVID_data_auxvar.txt&quot;)
+
+# compare dates and store result in boolean &#39;new_data&#39;
+if (!update_status==auxvar$last_update_status) new_data &lt;- TRUE else new_data &lt;- FALSE</code></pre>
+<p>Now, we can set the condition that there actually has to be new data, before we attempt to download and save it. If the file hasn’t been uploaded since we last checked, the last downloaded data file is read to the environment.</p>
+<pre class="r"><code>if (new_data) {
+    covid &lt;- as.data.frame(fread(filepath, encoding = &quot;UTF-8&quot;, colClasses = c(&quot;integer&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;character&quot;,&quot;factor&quot;,&quot;factor&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;character&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;integer&quot;,&quot;factor&quot;)))
+    save(covid,file=&quot;COVID_data.Rda&quot;)
+}
+
+if (!new_data) {
+    load(&quot;COVID_data.Rda&quot;)
+}
+
+str(covid)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    1324127 obs. of  18 variables:
+##  $ ObjectId            : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ IdBundesland        : Factor w/ 16 levels &quot;1&quot;,&quot;10&quot;,&quot;11&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Bundesland          : Factor w/ 16 levels &quot;Baden-Württemberg&quot;,..: 15 15 15 15 15 15 15 15 15 15 ...
+##  $ Landkreis           : Factor w/ 412 levels &quot;LK Ahrweiler&quot;,..: 336 336 336 336 336 336 336 336 336 336 ...
+##  $ Altersgruppe        : Factor w/ 7 levels &quot;A00-A04&quot;,&quot;A05-A14&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ Geschlecht          : Factor w/ 3 levels &quot;M&quot;,&quot;W&quot;,&quot;unbekannt&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ AnzahlFall          : int  5 1 1 2 1 5 1 1 1 3 ...
+##  $ AnzahlTodesfall     : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Meldedatum          : chr  &quot;2021/01/20 00:00:00+00&quot; &quot;2021/01/21 00:00:00+00&quot; &quot;2021/01/21 00:00:00+00&quot; &quot;2021/01/21 00:00:00+00&quot; ...
+##  $ IdLandkreis         : Factor w/ 412 levels &quot;01001&quot;,&quot;01002&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Datenstand          : Factor w/ 1 level &quot;02.03.2021, 00:00 Uhr&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ NeuerFall           : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ NeuerTodesfall      : int  -9 -9 -9 -9 -9 -9 -9 -9 -9 -9 ...
+##  $ Refdatum            : chr  &quot;2021/01/20 00:00:00+00&quot; &quot;2021/01/18 00:00:00+00&quot; &quot;2021/01/19 00:00:00+00&quot; &quot;2021/01/21 00:00:00+00&quot; ...
+##  $ NeuGenesen          : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AnzahlGenesen       : int  5 1 1 2 1 5 1 1 1 3 ...
+##  $ IstErkrankungsbeginn: int  0 1 1 0 1 0 1 1 1 0 ...
+##  $ Altersgruppe2       : Factor w/ 1 level &quot;Nicht übermittelt&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>After downloading (or not downloading) new data the externally stored variables need to be updated. The file <em>‘COVID_data_auxvar.txt’</em> holds the following information:</p>
+<ul>
+<li><em><em>last_check_datetime</em></em>: the date and time when it was last checked for new data</li>
+<li><em><em>last_downl_datetime</em></em>: the date and time of the latest download</li>
+<li><em><em>last_update_status</em></em>: the update status of the last downloaded file</li>
+</ul>
+<p>Depending on whether there was new data downloaded or not, different variables need to be updated:</p>
+<pre class="r"><code># if there was no new data
+if (!new_data) {
+    auxvar$last_check_datetime &lt;- format(Sys.time(), &quot;%Y-%m-%d %H:%M:%S %Z&quot;)
+    fwrite(auxvar,&quot;COVID_data_auxvar.txt&quot;)
+}
+
+# if new data was downloaded
+if (new_data) {
+    auxvar$last_check_datetime &lt;- format(Sys.time(), &quot;%Y-%m-%d %H:%M:%S %Z&quot;)
+    auxvar$last_downl_datetime &lt;- format(Sys.time(), &quot;%Y-%m-%d %H:%M:%S %Z&quot;)
+    auxvar$last_update_status &lt;- as.Date(update_status)
+    fwrite(auxvar,&quot;COVID_data_auxvar.txt&quot;)
+}</code></pre>
+</div>
+</div>

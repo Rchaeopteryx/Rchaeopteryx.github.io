@@ -14,7 +14,7 @@ tags:
 knitr::opts_chunk$set(echo = TRUE)
 
 rm(list = ls()) # Clear environment (for re-runs of the script) - Use carefully!!!
-setwd(paste0("C:/Hugo/Sites/Rchaeopteryx/Rchaeopteryx.github.io","/static/R/COVID_data"))
+#setwd(paste0("C:/Hugo/Sites/Rchaeopteryx/Rchaeopteryx.github.io","/static/R/COVID_data"))
 ```
 
 # My project: COVID-19 Dashboard
